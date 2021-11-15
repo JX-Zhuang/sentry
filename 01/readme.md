@@ -43,6 +43,7 @@ docker compose up -d
 ```
 * 访问 http://localhost:9000/
 
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/start.png)
 ### 4. 注册
 * 创建超级管理员账号
 ```
@@ -57,6 +58,7 @@ docker-compose run --rm web createuser --superuser --force-update
 ### 5. 登录
 * 登录成功
 
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/login.png)
 ### 6. 停服
 * 在onpremise目录
 ```
@@ -66,8 +68,16 @@ docker-compose down
 ## 二、接入sentry sdk
 ### 1. 创建sentry项目
 * 创建project
+
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/create-sentry-project.png)
+
 * 选择react，把project name改为cra-test，点击创建
+
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/cra-test.png)
+
 * 创建后会进入Configure React页，介绍前端如何接入sentry
+
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/configure-react.png)
 ### 2. 前端接入 sentry sdk
 * 创建前端项目
 ```
@@ -124,4 +134,8 @@ function App() {
 }
 export default App;
 ```
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/frontend-error.png)
+
 ### 4. 在sentry查看报错
+
+![image](https://github.com/JX-Zhuang/sentry/blob/master/01/imgs/issues.png)
