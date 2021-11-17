@@ -14,6 +14,7 @@ npm install -g --unsafe-perm=true --allow-root @sentry/cli
 * `org`:组织名称，可以在`sentry`的`Settings`中设置
 * `project`:`sentry`的项目名，可以在`sentry`管理界面的`Projects`中查看、创建、设置项目
 * `token`:`sentry`服务准入`sentry-cli`上传的鉴权`token`，可以在`sentry`管理界面的 `Settings -> Account -> API -> Auth Tokens`中创建和删除
+![image](https://github.com/JX-Zhuang/sentry/blob/master/02/imgs/token.png)
 ### 3.执行命令创建`sentry-cli`配置文件
 ```
 sentry-cli --url http://localhost:9000 login
@@ -85,10 +86,12 @@ Source Map Upload Report
     ~/static/js/runtime-main.06bbfa03.js.map
 ```
 * 回到Archive页面，发现sourcemap已经上传
+![image](https://github.com/JX-Zhuang/sentry/blob/master/02/imgs/archive.png)
 ### 7.查看效果
 * `http-server`启动前端服务
 * 访问`http://127.0.0.1:8080/`，手动制造错误
 * 在`sentry`后台查看`issue`，可以看到源码
+![image](https://github.com/JX-Zhuang/sentry/blob/master/02/imgs/issue.png)
 * 删除`sentry`
 ```
 sentry-cli releases files 0.0.1 delete --all
