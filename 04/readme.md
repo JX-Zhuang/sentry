@@ -43,13 +43,13 @@ function App(props) {
 export default App;
 ```
 * 点击`About`跳转，在`sentry`后台可以发现多上报了一条`transaction`
-![image](discover)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/04/imgs/discover.png)
 * 过一会儿，在`Sentry->Discover->All Events`中，我们可以看到刚才上报的`transaction: /about`，点击打开详情
-![image](discover-detail)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/04/imgs/discover-detail.png)
 ## `React-Router`导航操作检测
 * 对于`/user/:id`的路由，不同的`id`，上报的`transaction`名称是不同的，例如`/user/1`、`/user/2`。
 * 我们可以分别在`/user/1`、`/user/2`路由下刷新页面，然后在Sentry里，会看到两条不同的 TRANSACTION: /user/1、/user/2
-![image](users)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/04/imgs/users.png)
 * 如果我们希望他们是一条，预期应该显示: /user/:id，在`React`项目中，我们可以通过`Sentry.reactRouterV5Instrumentation`配置。（仅支持react-router-dom v5)
 * 安装history
 ```
@@ -117,5 +117,6 @@ function App(props) {
 
 export default App;
 ```
-![image](user)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/04/imgs/user.png)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/04/imgs/performance.png)
 * 还有一种方式可以也达到这个目的：使用 Sentry.withSentryRouting 高阶组件包裹 Route，具体可以参考[文档](https://docs.sentry.io/platforms/javascript/guides/react/configuration/integrations/react-router/)
