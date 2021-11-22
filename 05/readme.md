@@ -38,7 +38,7 @@ docker-compose down
 docker-compose up -d
 ```
 * 发送测试邮件
-![image](test-mail)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/05/imgs/test-mail.png)
 ## 设置报警规则
 可以设置一些报警规则，比如性能、错误，和对应的阈值。当触发报警规则后，会发送一封邮件到指定的邮箱，然后可以点击查看报警详情
-![image](mail)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/05/imgs/mail.png)
