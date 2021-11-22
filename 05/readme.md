@@ -15,7 +15,7 @@ vim ./sentry/config.yml
 ```
 # mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
 mail.host: 'smtp.qq.com'
-mail.port: 25
+mail.port: 587 
 mail.username: 'xxx@qq.com'
 mail.password: 'xxx'
 # mail.use-tls: false
@@ -41,3 +41,4 @@ docker-compose up -d
 ![image](test-mail)
 ## 设置报警规则
 可以设置一些报警规则，比如性能、错误，和对应的阈值。当触发报警规则后，会发送一封邮件到指定的邮箱，然后可以点击查看报警详情
+![image](mail)

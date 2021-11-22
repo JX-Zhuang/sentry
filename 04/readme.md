@@ -108,7 +108,7 @@ function App(props) {
         <Switch>
           <Route path="/user/:id" component={'user'} />
           <Route path="/about" component={'About'} />
-          <Route path="/" component={<button onClick={fn}>Break the world</button>} />
+          <Route path="/" component={()=><button onClick={fn}>Break the world</button>} />
         </Switch>
       </>
     </Router>
