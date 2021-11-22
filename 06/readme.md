@@ -78,9 +78,9 @@ npm i redux
   * 依次点击四个按钮，会报错
   * 在issues里找到这条错误记录
   * 在`BREADCRUMBS`中，可以看到有三条`redux`相关的`CATEGORY`，分别表示`redux init`、`dispatch SET_A`、`dispatch SET_C`。`dispatch SET_B`没有，是因为在`actionTransformer`中将其过滤掉了
-![image](redux)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/06/imgs/redux.png)
   * 页面往下翻，可以看到`REDIX.STATE`中记录了报错前最后的`state`，有`a`、`b`值，但没有c的值，是因为在`stateTransformer`中过滤了c的值
-![image](state)
+![image](https://github.com/JX-Zhuang/sentry/blob/master/06/imgs/state.png)
 ## rrweb重播
 * `rrweb`是一个开源的`Web`会话回放库，它提供易于使用的`API`来记录用户的交互并远程回放。可以记录鼠标移动轨迹、交互动作和页面变化，并播放。
 * `@sentry/rrweb`是`rrweb`的`sentry`插件。
